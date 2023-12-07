@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&family=Outfit:wght@100;300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url("../assets/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+}
+
+header img{
+    width: 20%;
+    height: auto;
+}
+
+main{
+    margin: 0 auto;
+    margin-top: 20vh;
+    width: 80%;
+    height: auto;
+}
+
+main h1{
+    font-weight: 300;
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 50px;
+}
+
+main h1 span{
+    font-weight: bold;
+}
+
+main h2{
+    color: #D20094;
+    margin-top: 30px;
+}
+
+main p{
+    margin: 5px 0 50px 0;
+}
+
+main ul{
+    line-height: 25px;
+}
+
+#container{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+#container div{
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+}
+
+input[type="checkbox"] + label{
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+input[type="checkbox"]:checked + label::before{
+    background-color: #fff;
+}
+
+
+input[type="checkbox"]:checked + label::after{
+    content:'\2713';
+    position: absolute;
+    top: -2px;
+    left: 6px;
+    color:#D20094;
+}
+
+button{
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #00ffff;
+    color: blue;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+}
+
+#display{
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#n_questions, #score{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+#n_questions span{
+    color: #D20094;
+}
+
+form{
+    margin: 5vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    width: 70%;
+    height: auto;
+}
+
+form label{
+    width: 45%;
+    height: 10vh;
+    margin: 2% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+form label:hover{
+    cursor: pointer;
+}
+
+form label span{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+form input[type="radio"]{
+    appearance: none;
+}
+
+:checked + span{
+    background-color: #D20094;
+}
+
+#timer{
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color:#00ffff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#timer span{
+    font-weight: bold;
+}

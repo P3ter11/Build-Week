@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Benvenuto</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/epicode_logo.png" alt="Epicode">
+    </header>
+
+    <main>
+        <h1>Welcome to <br><span>your exam</span></h1>
+        <h2>Instructions</h2>
+        <p>
+            We don't expect most engineers to know the answers to all of 
+            these questions, so don't worry if you're unsure of a few of them.
+        </p>
+        <ul>
+            <li>Each question is timed and can only be answered once.</li>
+            <li>Changing browser tab or opening other windows will invalidate the question.</li>
+            <li>This exam will take approx. 0-5 minutes.</li>
+        </ul>
+
+    </main>
+
+    <div id="container">
+        <div>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">I promise to answer myself without help from anyone</label>
+            
+        </div>
+        <button id="proceed" onclick="setTimer()">Proceed</button>
+
+    </div>
+
+    <script>
+        /* Funzione controllo checkbox */
+    document.getElementById("proceed").addEventListener("click", function(){
+      let check = document.getElementById("checkbox");
+      if(check.checked){
+        window.location.href="domande.html";
+      }
+      else{
+        alert('Please accept terms and conditions');
+      }
+    });
+    </script>
+</body>
+</html>
